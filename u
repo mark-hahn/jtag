@@ -8,4 +8,4 @@ export ARDUINO_LIBS="NeoHWSerial"
 export ARDUINO_QUIET=true
 
 make upload
-make monitor
+# make monitor

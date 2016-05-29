@@ -114,17 +114,13 @@ uint32_t checkId() {
 	}
 }
 
-// bool hi = 0;
-static void handleRxChar(uint8_t c ) {
-  // hi = !hi;
-  // digitalWrite(13,hi);
+static void handleRxChar(uint8_t c) {
   NeoSerial.println(c);
 }
 
 void setup() {
-  pinMode(13, OUTPUT); // for debug
   NeoSerial.attachInterrupt( handleRxChar );
-  NeoSerial.begin( 9600 );
+  NeoSerial.begin( 115200 );
   NeoSerial.println("Logic+: Starting ...");
   checkId();
 }
